@@ -2,14 +2,14 @@
 class Pkgr < Formula
   desc ""
   homepage ""
-  version "0.5.0-beta.2"
+  version "0.5.0-beta.3"
 
   if OS.mac?
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v0.5.0-beta.2/pkgr_0.5.0-beta.2_darwin_amd64.tar.gz"
-    sha256 "82f63709e7c2eeea93f7d261da5fbf7a09810d3e072cae2f93dccd1d98179cda"
+    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v0.5.0-beta.3/pkgr_0.5.0-beta.3_darwin_amd64.tar.gz"
+    sha256 "e40e68176f035d72fa7da719b0edf578177969489969f2f9d894284226b22d9c"
   elsif OS.linux?
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v0.5.0-beta.2/pkgr_0.5.0-beta.2_linux_amd64.tar.gz"
-    sha256 "f0ba3ffd5ddba965e25da10c24da9080036e984667fc0c989b6563037e21ee42"
+    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v0.5.0-beta.3/pkgr_0.5.0-beta.3_linux_amd64.tar.gz"
+    sha256 "6d9e1186bd4f19fb7479268cdc297ca7cd992aa20fb3d8c08c4653c3435302aa"
   end
 
   def install
