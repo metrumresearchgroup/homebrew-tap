@@ -2,16 +2,16 @@
 class Bbi < Formula
   desc ""
   homepage ""
-  version "2.1.0-alpha.10"
+  version "2.1.0-alpha.11"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metrumresearchgroup/babylon/releases/download/v2.1.0-alpha.10/bbi_2.1.0-alpha.10_darwin_amd64.tar.gz"
-    sha256 "948eb924e3b0cf2d9650c61b84ad290b42a2f39cd34ef5b6e905163e4472b95b"
+    url "https://github.com/metrumresearchgroup/babylon/releases/download/v2.1.0-alpha.11/bbi_2.1.0-alpha.11_darwin_amd64.tar.gz"
+    sha256 "900af3acbade98bb0e31138aa5dcce6b14f0f33029d337a935b2c5bd738c06ff"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/babylon/releases/download/v2.1.0-alpha.10/bbi_2.1.0-alpha.10_linux_amd64.tar.gz"
-      sha256 "26e00ec41fc2158da2a7d5d7a503eef7c9682564079b3820b28ed323461ba236"
+      url "https://github.com/metrumresearchgroup/babylon/releases/download/v2.1.0-alpha.11/bbi_2.1.0-alpha.11_linux_amd64.tar.gz"
+      sha256 "e7a10207400c1f73bcc64b3f41137b0c1a92679c17ddccdac06f1ed296067805"
     end
   end
 
