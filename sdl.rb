@@ -2,16 +2,16 @@
 class Sdl < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metrumresearchgroup/sdl/releases/download/v0.1.0/sdl_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "af9985acfbdcb37d491a6a609c1f504760cbbd3eadb8791dcd5a5bd988ec2df8"
+    url "https://github.com/metrumresearchgroup/sdl/releases/download/v0.1.1/sdl_0.1.1_Darwin_x86_64.tar.gz"
+    sha256 "d9a13d9e2c5b6cde7a4c522124359ab243dee995d56a473bd14c784f86f7bbd4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/sdl/releases/download/v0.1.0/sdl_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "79fb3084d7b7d8bdd8ec2622533fb966fcdf417e76bd5460e931b4401e0de238"
+      url "https://github.com/metrumresearchgroup/sdl/releases/download/v0.1.1/sdl_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "c7a7974ab345ab24fd1372d7c375dfb6944852c68013035bfb2996c23ad05309"
     end
   end
 
