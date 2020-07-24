@@ -2,16 +2,16 @@
 class Pkgr < Formula
   desc ""
   homepage ""
-  version "1.2.0"
+  version "1.2.1-rc.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v1.2.0/pkgr_1.2.0_darwin_amd64.tar.gz"
-    sha256 "28444e4bffce66470bf157ba742b44dd6f6164b71893f21494dde5cde69aa599"
+    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v1.2.1-rc.1/pkgr_1.2.1-rc.1_darwin_amd64.tar.gz"
+    sha256 "36a95db40b027a09e405b0edabf22ae8c8febe254210cbc1675542f03ff9a6ff"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v1.2.0/pkgr_1.2.0_linux_amd64.tar.gz"
-      sha256 "5722990b30b92883df37767e4d459868b7906596fbaa2ee56a69ab7f06fd8e35"
+      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v1.2.1-rc.1/pkgr_1.2.1-rc.1_linux_amd64.tar.gz"
+      sha256 "abb72a9c8c72a361f581eab246a076f91d9ef4256844be76bc2e51843e1d9d8f"
     end
   end
 
