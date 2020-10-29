@@ -7,11 +7,11 @@ class Bbi < Formula
 
   if OS.mac?
     url "https://github.com/metrumresearchgroup/babylon/releases/download/v2.3.1/bbi_darwin_amd64.tar.gz"
-    sha256 "0f2b335345859b3af3df09cda325a0340a6ec2288663b8aafe78cff99ef006da"
+    sha256 "3736442299a06e29b59746cb835382c62e0a7e7b794344e55a9041522fb16ab8"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/metrumresearchgroup/babylon/releases/download/v2.3.1/bbi_linux_amd64.tar.gz"
-      sha256 "9acc09aef7a41be0bd18fd1914ddea81532dd261df440c43c366c8d72ca3b116"
+      sha256 "69ea07e43421c3b850d11eb50691023435bd22786132ea2503f2cdd4dea08c9a"
     end
   end
 
