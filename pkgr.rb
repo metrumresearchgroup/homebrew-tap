@@ -7,11 +7,11 @@ class Pkgr < Formula
 
   if OS.mac?
     url "https://github.com/metrumresearchgroup/pkgr/releases/download/v2.0.1/pkgr_2.0.1_darwin_amd64.tar.gz"
-    sha256 "963b598789e3e5e459349e303121815e1d20ad60939866c806dc06e165f205ed"
+    sha256 "7d762765257d0c9c9dbdfb12cabe29bd7fe2176bcb2848b8119b0e254a9c2ddf"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/metrumresearchgroup/pkgr/releases/download/v2.0.1/pkgr_2.0.1_linux_amd64.tar.gz"
-      sha256 "2c9c4798dc5ccb8cb9367ae5fbeece3c55911192093a26f006e8d626ebfd151b"
+      sha256 "3648e0cbfafa71ec02cdfa7337f8c5ce32a5f3468aae23a994436bd27b0f8e9c"
     end
   end
 
