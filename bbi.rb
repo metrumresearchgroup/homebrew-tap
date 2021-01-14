@@ -10,15 +10,15 @@ class Bbi < Formula
 
   if OS.mac?
     url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.0/bbi_darwin_amd64.tar.gz"
-    sha256 "7bf68395381ac4568acf8ed97106c121ce19311e2d5d6521f8917e9e6ab03139"
+    sha256 "8a3b07b7471a042e9fe2a713ebce8b3524309249ffdb6aa0606f0d7f9cb1ae4f"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.0/bbi_linux_amd64.tar.gz"
-    sha256 "5c9a25da9373eee2399ea71400e92d3db833805feaeda22b825677893b336718"
+    sha256 "08dd4f5803b1646ded76f18b8e76748c5fcf735075f36081715abe3db30954be"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.0/bbi_linux_arm64.tar.gz"
-    sha256 "5f9cf90f9619e0569623cd5f5a80f86476fdf9bc25d31daccd8469a0b6612277"
+    sha256 "6800e42c799a3dd44c3845602e53f2a1efca0bdf867cf8e6bc0efb9cf681743b"
   end
 
   def install
