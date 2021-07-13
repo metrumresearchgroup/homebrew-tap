@@ -5,20 +5,29 @@
 class Bbi < Formula
   desc ""
   homepage ""
-  version "3.0.2"
+  version "3.0.3"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.2/bbi_darwin_amd64.tar.gz"
-    sha256 "454309fad9e2f4b07a4116720df3017a7ce34f04f7e4172a65c76d70a81b7d3d"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.3/bbi_darwin_amd64.tar.gz"
+      sha256 "202da62a79919345d9c274d6cb8de2d0ae0eaa85361fc6e865759e4e04f7c2d9"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.3/bbi_darwin_arm64.tar.gz"
+      sha256 "7d6a64e49c6998df8ef38f52d9c9aee7750a575382db55007188cc407acb79a7"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.2/bbi_linux_amd64.tar.gz"
-    sha256 "0fd3b8ed962a51497e422507867966dd54a36c145a0bc09a2ed62147ed899fec"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.2/bbi_linux_arm64.tar.gz"
-    sha256 "9aa725a9db2aa9cf25628c25158b3c07d13cd60ac615291a09f16596ecad9033"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.3/bbi_linux_amd64.tar.gz"
+      sha256 "43ae4e94431a772a0b9cd2e75a2fa1279d73519d7c8e2470acb4b3841d0a16cc"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.0.3/bbi_linux_arm64.tar.gz"
+      sha256 "a84f8d8e45bfb432bfd23901310c32adac27c9ed51f0de76ef0a9311cdf49c1f"
+    end
   end
 
   def install
