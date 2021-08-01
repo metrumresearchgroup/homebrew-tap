@@ -5,16 +5,21 @@
 class Pkgr < Formula
   desc ""
   homepage ""
-  version "3.0.0-alpha.3"
+  version "3.0.0-rc1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-alpha.3/pkgr_3.0.0-alpha.3_darwin_amd64.tar.gz"
-    sha256 "31fc7cac7d9761270058a8eae30bb96f1d8f43a72f1343c190fe2ae34169e2b2"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-rc1/pkgr_3.0.0-rc1_darwin_amd64.tar.gz"
+      sha256 "299f183554e613270a6faf3a33625cb553033c67193ba77b066a993922d56a35"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-alpha.3/pkgr_3.0.0-alpha.3_linux_amd64.tar.gz"
-    sha256 "c802d02a764637b0f991bd48611b1c5761d4409d0619a64510b38dae04ad7a0e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-rc1/pkgr_3.0.0-rc1_linux_amd64.tar.gz"
+      sha256 "6f8e1fcb79d0cfee2438495895bf9f95a689b844455f1238ca62c2c00967899b"
+    end
   end
 
   def install
