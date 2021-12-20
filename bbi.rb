@@ -5,32 +5,43 @@
 class Bbi < Formula
   desc ""
   homepage ""
-  version "3.1.0"
-  bottle :unneeded
+  version "3.1.1-rc1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.0/bbi_darwin_arm64.tar.gz"
-      sha256 "be03205eb1dcebcbd88c75aae1c57029d374709f2153b295d8ddcd20653476a1"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.0/bbi_darwin_amd64.tar.gz"
-      sha256 "d9a4bceb3e29efe9a12094e3ed6821ff6d3084171978e8039b4e03d5cc4a6422"
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.1-rc1/bbi_darwin_amd64.tar.gz"
+      sha256 "6686d2132178dad866d999b12fc4054f41c07d17272c1477b2d9fcab645306bc"
+
+      def install
+        bin.install "bbi"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.1-rc1/bbi_darwin_arm64.tar.gz"
+      sha256 "83c61c6a4a980e80742d767819f79bb87dfab26f8a0f38ef95ffcec550262efd"
+
+      def install
+        bin.install "bbi"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.0/bbi_linux_arm64.tar.gz"
-      sha256 "40edef00879ee48edc95d8d492d35f6f1bbd52ebcc035151744145264057501c"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.0/bbi_linux_amd64.tar.gz"
-      sha256 "f02e43ef2650d7e248d22ee1ca4e475834dc06b6da5489128fe47d4579669119"
-    end
-  end
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.1-rc1/bbi_linux_amd64.tar.gz"
+      sha256 "9af89e3b4b9171938ddbd2754275df96d3c7f336a85f06ec6c94eafb3fcefa7b"
 
-  def install
-    bin.install "bbi"
+      def install
+        bin.install "bbi"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.1.1-rc1/bbi_linux_arm64.tar.gz"
+      sha256 "ccbd6729fdb5fa2f11dd6157d295e0126c8f8eb429451d680eea28684e7876ce"
+
+      def install
+        bin.install "bbi"
+      end
+    end
   end
 end
