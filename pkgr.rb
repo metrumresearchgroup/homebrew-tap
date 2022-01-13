@@ -5,24 +5,27 @@
 class Pkgr < Formula
   desc ""
   homepage ""
-  version "3.0.0-rc1"
-  bottle :unneeded
+  version "3.0.0-rc4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-rc1/pkgr_3.0.0-rc1_darwin_amd64.tar.gz"
-      sha256 "299f183554e613270a6faf3a33625cb553033c67193ba77b066a993922d56a35"
+      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-rc4/pkgr_3.0.0-rc4_darwin_amd64.tar.gz"
+      sha256 "e48cac92eca784df04a4a508c4bfe8e359eb3c2c09ba730b81bcd48dcb9b8caa"
+
+      def install
+        bin.install "pkgr"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-rc1/pkgr_3.0.0-rc1_linux_amd64.tar.gz"
-      sha256 "6f8e1fcb79d0cfee2438495895bf9f95a689b844455f1238ca62c2c00967899b"
-    end
-  end
+      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.0.0-rc4/pkgr_3.0.0-rc4_linux_amd64.tar.gz"
+      sha256 "107adcbc626948b3a690bf7487a9fe32a6db1e37aeb9ac032eea41185531bece"
 
-  def install
-    bin.install "pkgr"
+      def install
+        bin.install "pkgr"
+      end
+    end
   end
 end
