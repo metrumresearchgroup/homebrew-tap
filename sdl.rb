@@ -3,7 +3,6 @@ class Sdl < Formula
   desc ""
   homepage ""
   version "0.1.2"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/metrumresearchgroup/sdl/releases/download/v0.1.2/sdl_0.1.2_Darwin_x86_64.tar.gz"
