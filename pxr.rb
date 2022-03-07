@@ -3,7 +3,6 @@ class Pxr < Formula
   desc ""
   homepage ""
   version "0.0.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/metrumresearchgroup/pxr/releases/download/0.0.1/pxr_0.0.1_darwin_amd64.tar.gz"
