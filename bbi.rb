@@ -5,20 +5,20 @@
 class Bbi < Formula
   desc ""
   homepage ""
-  version "3.2.1"
+  version "3.2.2-rc1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.1/bbi_darwin_arm64.tar.gz"
-      sha256 "b9eba7698775c208858ddd4d0c3862a65ab9291904702807d7e62ffcabaa9af6"
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2-rc1/bbi_darwin_arm64.tar.gz"
+      sha256 "9a9245f8713fabc190840ea77d580747bd98a21daab5c98db383dbb082102d19"
 
       def install
         bin.install "bbi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.1/bbi_darwin_amd64.tar.gz"
-      sha256 "ba8024b01781a6f981664270849f3e457bf12009f9a45063399ce9b3585ff0d1"
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2-rc1/bbi_darwin_amd64.tar.gz"
+      sha256 "64bbefb887b9ff95c5eababc6766977c0599d4ce832eed2077fbec23731c1201"
 
       def install
         bin.install "bbi"
@@ -27,17 +27,17 @@ class Bbi < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.1/bbi_linux_arm64.tar.gz"
-      sha256 "5f6346d4e6fa18bc8e9ea803e5227caeb2999ff1c987223563cc67ca16e1b5a9"
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2-rc1/bbi_linux_amd64.tar.gz"
+      sha256 "10b9682e9de6bf6c52e580200568ac287dc1d3f16e557d15f6043cdd48f86e17"
 
       def install
         bin.install "bbi"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.1/bbi_linux_amd64.tar.gz"
-      sha256 "b4792f30aedea9878a91cf91c19bc7538047151c3841e01d0e47afb277537e39"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2-rc1/bbi_linux_arm64.tar.gz"
+      sha256 "03977d19593136e0e58404748bdd61152ad18dda92f05e3d8dc55352c4389f2d"
 
       def install
         bin.install "bbi"
