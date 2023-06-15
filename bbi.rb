@@ -5,20 +5,20 @@
 class Bbi < Formula
   desc ""
   homepage ""
-  version "3.2.2"
+  version "3.2.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2/bbi_darwin_arm64.tar.gz"
-      sha256 "9032e5f37ae933e328d12aaa47a0e82bb8d496ae7e77bcbd28db9286d5391cbf"
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.3/bbi_darwin_amd64.tar.gz"
+      sha256 "73dca651bc1a7f863646d12da4f916affbd158474874345d961f600ab470685a"
 
       def install
         bin.install "bbi"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2/bbi_darwin_amd64.tar.gz"
-      sha256 "6f7a5d027de8f9dc53bc062b8a0c5ae5515d642eb1758ac9bef7e3fcdd9c61f2"
+    if Hardware::CPU.arm?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.3/bbi_darwin_arm64.tar.gz"
+      sha256 "e6b32982568ad12dd570790bdf5d38bb7e801b324ab2e7f4e2ab46ea94ce3cf4"
 
       def install
         bin.install "bbi"
@@ -28,16 +28,16 @@ class Bbi < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2/bbi_linux_arm64.tar.gz"
-      sha256 "d4fd0ab0fc66e16d7e091309d0b5fa021b9c07610411f05d062c8220c2c57183"
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.3/bbi_linux_arm64.tar.gz"
+      sha256 "fa54d646231f0a5385bb5ea365495cb842e84b273c754eeea3559e37bbdb1669"
 
       def install
         bin.install "bbi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.2/bbi_linux_amd64.tar.gz"
-      sha256 "a1601fbb05431b1d66b8f333371ddddd8c2912eda03e33c4fa7da11e16f24988"
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.2.3/bbi_linux_amd64.tar.gz"
+      sha256 "328b21f1e8c01bd12d2ce3f10a811cec1cccc0e626d101e11abd0c55349f22c6"
 
       def install
         bin.install "bbi"
