@@ -5,17 +5,17 @@
 class Pkgr < Formula
   desc ""
   homepage ""
-  version "3.1.1"
+  version "3.1.2-rc.1"
 
   on_macos do
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.1/pkgr_3.1.1_darwin_amd64.tar.gz"
-    sha256 "4232bece649c0a7c7e583147ed272101718a23b9ec6dac8e52eb9164889403ec"
+    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.2-rc.1/pkgr_3.1.2-rc.1_darwin_amd64.tar.gz"
+    sha256 "aa95757f5478d5087a1aadd44b8ebbe848f2ecfc0e1097c45f98fa7beb63de6b"
 
     def install
       bin.install "pkgr"
     end
 
-    if Hardware::CPU.arm?
+    on_arm do
       def caveats
         <<~EOS
           The darwin_arm64 architecture is not supported for the Pkgr
@@ -27,12 +27,14 @@ class Pkgr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.1/pkgr_3.1.1_linux_amd64.tar.gz"
-      sha256 "b41d6af4ea9e73d1ce3d383fb69ee7f2fc2b4516336a56ed81a5974ac689e561"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.2-rc.1/pkgr_3.1.2-rc.1_linux_amd64.tar.gz"
+        sha256 "7db578d56e6e15ead1ba9b1156ae29aa29767df1209f659c2f51d2bea5f02bc7"
 
-      def install
-        bin.install "pkgr"
+        def install
+          bin.install "pkgr"
+        end
       end
     end
   end
