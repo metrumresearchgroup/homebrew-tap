@@ -5,11 +5,11 @@
 class Pkgr < Formula
   desc ""
   homepage ""
-  version "3.1.2-rc.1"
+  version "3.1.2"
 
   on_macos do
-    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.2-rc.1/pkgr_3.1.2-rc.1_darwin_amd64.tar.gz"
-    sha256 "aa95757f5478d5087a1aadd44b8ebbe848f2ecfc0e1097c45f98fa7beb63de6b"
+    url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.2/pkgr_3.1.2_darwin_amd64.tar.gz"
+    sha256 "335c7c283d17bb09fbd340e855a8f9b517fc5404f3bcf9e6bae94869d0ea7711"
 
     def install
       bin.install "pkgr"
@@ -29,8 +29,8 @@ class Pkgr < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.2-rc.1/pkgr_3.1.2-rc.1_linux_amd64.tar.gz"
-        sha256 "7db578d56e6e15ead1ba9b1156ae29aa29767df1209f659c2f51d2bea5f02bc7"
+        url "https://github.com/metrumresearchgroup/pkgr/releases/download/v3.1.2/pkgr_3.1.2_linux_amd64.tar.gz"
+        sha256 "b49771427e43b7c2986cb6e1f9dad8e349e9d873d53607dc8c7032ef2f81cff8"
 
         def install
           bin.install "pkgr"
