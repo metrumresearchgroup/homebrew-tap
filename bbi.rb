@@ -5,20 +5,20 @@
 class Bbi < Formula
   desc ""
   homepage ""
-  version "3.3.1"
+  version "3.4.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.3.1/bbi_darwin_amd64.tar.gz"
-      sha256 "08684bc96baa3818b77ceb07b69ad409136c1b01c1b3fce84661ac44662e93e0"
+    if Hardware::CPU.intel?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.4.0/bbi_darwin_amd64.tar.gz"
+      sha256 "9fd69c8672c0c38bc6896cfdceae71fc9ebfe36ca0f41de67125a55eb3f560dd"
 
       def install
         bin.install "bbi"
       end
     end
-    on_arm do
-      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.3.1/bbi_darwin_arm64.tar.gz"
-      sha256 "5574683ebcc79af41a7d29bf06a5fd356cda0fd2cd9616cbfde67c427a596bc9"
+    if Hardware::CPU.arm?
+      url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.4.0/bbi_darwin_arm64.tar.gz"
+      sha256 "515d0ee26cda0864c5668ad6d7f641681f1a1bc1e6f5cab8f8944270f4e759d5"
 
       def install
         bin.install "bbi"
@@ -27,20 +27,20 @@ class Bbi < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.3.1/bbi_linux_amd64.tar.gz"
-        sha256 "f1b0852d54604af352081cdc6e8506cd4e4eb2064cc61e610b4612b535ff184f"
+        url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.4.0/bbi_linux_amd64.tar.gz"
+        sha256 "9f8a3add53a0c8c4cd8ac058b956157c62b0ea98f408592907b49ab7abb01b40"
 
         def install
           bin.install "bbi"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.3.1/bbi_linux_arm64.tar.gz"
-        sha256 "77d171bd919b35c9596dd2df795343edd487b9e66b82111d306df84775066997"
+        url "https://github.com/metrumresearchgroup/bbi/releases/download/v3.4.0/bbi_linux_arm64.tar.gz"
+        sha256 "5673b4f6f6b0416a29cffc345440078916255d33618ea95be71c56a30a8ad4db"
 
         def install
           bin.install "bbi"
